@@ -1,0 +1,184 @@
+$finderWidth: 850px;
+$finderHeight: 500px;
+$finderNavigationMenuWidth: 210px;
+$borderRadiusFinder: 10px;
+
+.minimize-animation{  
+  display: none;
+}
+
+.finder-container {
+  opacity: 1;
+  width: $finderWidth;
+  height: $finderHeight;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: auto;
+  &:focus-within, &:focus{
+      z-index: 1000;
+      outline: none;
+  }
+
+  .finder-navigation-menu {
+    overflow: auto;
+    width: $finderNavigationMenuWidth;
+    height: $finderHeight;
+    background-color: rgba(22, 22, 22, 0.65);
+    backdrop-filter: blur(10px);    
+    border: solid 1px rgb(138, 138, 138);
+    border-right: none !important;
+    border-radius: $borderRadiusFinder 0 0 $borderRadiusFinder;
+
+    .control-button {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin: 4px;
+      position: relative;
+      border-radius: 50%;
+
+      img {
+        visibility: hidden;
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    .control-buttons {
+      padding: 20px 0 10px 20px;            
+      &:hover > * {
+        img {
+          visibility: visible;
+        }
+      }
+
+      .control-close {
+        background-color: #ed6a5e;
+      }
+      .control-minimize {
+        background-color: #f4bf4f;
+      }
+      .control-maximize {
+        background-color: #62c653;
+      }
+    }
+
+    .navigation-items {
+      padding: 10px;
+      margin-top: 15px;
+      overflow: auto;
+      cursor: default;
+
+      .navigation-type {
+        display: block;
+        color: rgb(163, 163, 163);
+        font-weight: bold;
+        font-size: small;
+        margin-left: 6px;
+        margin-bottom: 6px;
+      }
+
+      .navigation-active{
+        background-color: #ffffff34;
+      }
+
+      .navigation-item {
+        padding: 5px 12px;
+        margin: 0;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;        
+
+        .navigation-item-img {
+          width: 16px;
+          height: 16px;
+        }
+        .navigation-item-text {
+          margin-left: 10px;
+          color: #fff;
+        }
+      }
+    }
+  }
+  .finder-body {
+    width: $finderWidth - $finderNavigationMenuWidth;
+    height: 100%;
+    background-color: #1E1E1E;;
+    position: absolute;
+    border-radius: 0 $borderRadiusFinder $borderRadiusFinder 0;
+    border: solid 1px rgb(138, 138, 138);
+    border-left: solid 1px rgb(14, 14, 14);
+    top: 0;
+    left: $finderNavigationMenuWidth;
+
+    .finder-appbar {
+      width: $finderWidth - $finderNavigationMenuWidth - 40px;
+      padding: 10px 20px;
+      display: flex;
+      align-items: center;
+
+      .right-align {
+        margin-left: auto;
+        .margin-space {
+          margin-left: 20px;
+        }
+      }
+
+      .finder-appbar-icon {
+        height: 16px;
+        padding: 6px 10px;
+        border-radius: 4px;
+
+        &:hover {
+          background-color: #ffffff15;
+        }
+      }
+
+      .finder-location {
+        color: #fff;
+        font-weight: bold;
+        margin-left: 4px;
+      }
+    }
+
+    .finder-files {
+      padding: 10px 20px;          
+
+      .finder-file-img {         
+        border-radius: 4px;
+        height: 70px;
+        width: 70px;
+        object-fit: contain;        
+        
+      }
+      .finder-file-title {
+        border-radius: 4px;
+        height: 20px;
+        margin-top: 3px;
+        max-width: 70px !important;
+        width: fit-content;
+        padding: 0 5px !important;
+        align-self: center;                
+      }
+      .finder-file-item{
+        display: flex;
+        vertical-align: middle;
+        &:focus-within {
+          outline: none;
+          .finder-file-img {
+            background-color: rgba(207, 207, 207, 0.123);
+          }
+          .finder-file-title {
+            background-color: #158dff;
+          }
+        }
+      }
+    }
+  }
+}

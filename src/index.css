@@ -1,0 +1,30 @@
+@font-face {
+  font-family: 'SFPro';
+  src: local('SFPro'), url(./assets/fonts/SFPro.ttf) format('truetype');
+}
+
+@font-face {
+    font-family: 'SFPro';
+    font-weight: 900;
+    src: local('SFPro'), url(./assets/fonts/SFPRODISPLAYBOLD.OTF) format('opentype');
+}
+
+@font-face {
+    font-family: 'SFPro';
+    font-weight: 600;
+    src: local('SFPro'), url(./assets/fonts/SFPRODISPLAYMEDIUM.OTF) format('opentype');
+}
+
+body {  
+  height: 100vh;
+  width: 100vh;
+  margin: 0;
+  font-family: 'SFPro', serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
