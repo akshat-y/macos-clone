@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/macos-clone/static/css/main.f2f22612.css",
-    "main.js": "/macos-clone/static/js/main.7a86690d.js",
+    "main.js": "/macos-clone/static/js/main.80fd72ad.js",
     "static/media/image3.jpeg": "/macos-clone/static/media/image3.39b42088a8c5fbb8677e.jpeg",
     "static/media/bg.jpeg": "/macos-clone/static/media/bg.17ce460bcb0b8087b537.jpeg",
     "static/media/bg4.jpeg": "/macos-clone/static/media/bg4.5c88b12b0005124e5664.jpeg",
@@ -81,10 +81,10 @@
     "static/media/chevron_right.svg": "/macos-clone/static/media/chevron_right.2f1b5692be6efdfcfaf1619addff4df5.svg",
     "static/media/minimize.svg": "/macos-clone/static/media/minimize.f040bdd75c996b0a6acb5b66167fed1c.svg",
     "main.f2f22612.css.map": "/macos-clone/static/css/main.f2f22612.css.map",
-    "main.7a86690d.js.map": "/macos-clone/static/js/main.7a86690d.js.map"
+    "main.80fd72ad.js.map": "/macos-clone/static/js/main.80fd72ad.js.map"
   },
   "entrypoints": [
     "static/css/main.f2f22612.css",
-    "static/js/main.7a86690d.js"
+    "static/js/main.80fd72ad.js"
   ]
 }
